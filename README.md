@@ -27,6 +27,7 @@ Example:
 	})
 
 This will return stars 21-40 that are in Orion with a magnitude of 3 or greater.
+
 -------------
 
 `getConstellations(callback)`
@@ -44,6 +45,7 @@ This method accepts a constellation's abbreviation as an argument *([good list h
 Example: `skyglass.getConstellation('Ori');
 
 This will return JSON for the constellation of Orion.
+
 -------------
 
 `addConnection(con, [starid1, starid2], callback)`
@@ -53,6 +55,7 @@ This method accepts a constellation's abbreviation, an array of 2 star's ids, an
 It will add a connection between these two stars to the constellation.
 
 Example: `skyglass.addConnections('Tau', [1234, 4321], ...);
+
 -------------
 
 `removeConnection(con, [starid1, starid2], callback)`
@@ -62,6 +65,7 @@ This method accepts a constellation's abbreviation, an array of 2 star's ids, an
 It will remove a connection between these two stars to the constellation.
 
 Example: `skyglass.removeConnections('And', [1234, 4321], ...);
+
 -------------
 
 
