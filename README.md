@@ -64,6 +64,5 @@ It will remove a connection between these two stars to the constellation.
 
 Example: `skyglass.removeConnections('And', [1234, 4321], ...)`
 
--------------
 
 
