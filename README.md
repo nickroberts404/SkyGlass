@@ -40,8 +40,6 @@ Invokes callback with data for all constellations.
 
 This method accepts a constellation's abbreviation as an argument *([good list here](https://en.wikipedia.org/wiki/88_modern_constellations))*  and invokes the callback with its data.
 
-`con` is a constellation's abbreviation. *[Here is a good list of them](https://en.wikipedia.org/wiki/88_modern_constellations)*
-
 Example: `skyglass.getConstellation('Ori');
 
 This will return JSON for the constellation of Orion.
@@ -54,7 +52,7 @@ This method accepts a constellation's abbreviation, an array of 2 star's ids, an
 
 It will add a connection between these two stars to the constellation.
 
-Example: `skyglass.addConnections('Tau', [1234, 4321], ...);
+Example: `skyglass.addConnections('Tau', [1234, 4321], ...)`
 
 -------------
 
@@ -64,7 +62,7 @@ This method accepts a constellation's abbreviation, an array of 2 star's ids, an
 
 It will remove a connection between these two stars to the constellation.
 
-Example: `skyglass.removeConnections('And', [1234, 4321], ...);
+Example: `skyglass.removeConnections('And', [1234, 4321], ...)`
 
 -------------
 
