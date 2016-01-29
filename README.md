@@ -40,7 +40,7 @@ Invokes callback with data for all constellations.
 
 This method accepts a constellation's abbreviation as an argument *([good list here](https://en.wikipedia.org/wiki/88_modern_constellations))*  and invokes the callback with its data.
 
-Example: `skyglass.getConstellation('Ori');
+Example: `skyglass.getConstellation('Ori')`
 
 This will return JSON for the constellation of Orion.
 
