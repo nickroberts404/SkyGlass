@@ -1,0 +1,28 @@
+{
+  "name": "skyglass",
+  "version": "1.0.0",
+  "description": "An API that interacts with the Telescope service.",
+  "main": "skyglass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickroberts404/SkyGlass.git"
+  },
+  "keywords": [
+    "sky",
+    "stars",
+    "constellations",
+    "night"
+  ],
+  "author": "Nick Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickroberts404/SkyGlass/issues"
+  },
+  "homepage": "https://github.com/nickroberts404/SkyGlass#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  }
+}

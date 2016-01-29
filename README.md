@@ -1,2 +1,2 @@
 # SkyGlass
-An API that allows interaction with the Telescope service.
+An API that interacts with the Telescope service.
