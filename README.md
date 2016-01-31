@@ -1,5 +1,5 @@
 # SkyGlass
-An API that interacts with the Telescope service.
+An API that interacts with the [Telescope](https://github.com/nickroberts404/Telescope) service.
 
 **Currently in testing, Telescope server isn't live yet**
 
