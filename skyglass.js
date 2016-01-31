@@ -28,7 +28,7 @@ module.exports = {
 		makePutRequest(url, body, cb);
 	},
 	removeFromConstellation: function(stars, cb){
-		console.log('Adding stars to their constellations...');
+		console.log('Removing stars from their constellations...');
 		var body = { stars: stars, add_stars: false };
 		var url = api+'/constellations'
 		makePutRequest(url, body, cb);
@@ -54,7 +54,7 @@ function makePutRequest(url, body, cb){
 		headers: {
 	        'Content-Type': 'application/json'
     	},
-		body: JSON.stringify(body)});
+		body: JSON.stringify(body)}, cb);
 }
 
 function buildQuery(options){
