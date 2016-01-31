@@ -21,22 +21,35 @@ module.exports = {
 		console.log('Getting constellation '+con+'...');
 		request(api+'/constellations?con='+con, cb);
 	},
+	addToConstellation: function(stars, cb){
+		console.log('Adding stars to their constellations...');
+		var body = { stars: stars, add_stars: true };
+		var url = api+'/constellations'
+		makePutRequest(url, body, cb);
+	},
+	removeFromConstellation: function(stars, cb){
+		console.log('Adding stars to their constellations...');
+		var body = { stars: stars, add_stars: false };
+		var url = api+'/constellations'
+		makePutRequest(url, body, cb);
+	},
 	addConnection: function(con, connection, cb){
 		console.log('Adding connection to '+con+'...');
 		var body = { connection: connection, addConnection: true }
-		updateConnection(con, body, cb)
+		var url = api+'/constellations?con='+con
+		makePutRequest(url, body, cb)
 	},
 	removeConnection: function(con, connection, cb){
 		console.log('Removing connection to '+con+'...');
 		var body = { connection: connection, addConnection: false }
-		updateConnection(con, body, cb)
+		var url = api+'/constellations?con='+con
+		makePutRequest(url, body, cb)
 	}
 }
 
-function updateConnection(con, body, cb){
-	console.log(body);
+function makePutRequest(url, body, cb){
 	request({
-		url: api+'/constellations?con='+con, 
+		url: url, 
 		method:'PUT', 
 		headers: {
 	        'Content-Type': 'application/json'
