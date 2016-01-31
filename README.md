@@ -1,6 +1,6 @@
 # SkyGlass
 An API that interacts with the Telescope service.
-
+** Currently in testing, Telescope server isn't live yet **
 ### API
 
 `getStars(options, callback)`
