@@ -8,18 +8,26 @@ module.exports = {
 		console.log('Getting stars...');
 		if (typeof options === 'function') {
 			// The options argument is really our callback
-			request(api+'/stars', options)
+			request(api+'/stars', function(err, res, body){
+				options(err, JSON.parse(body));
+			});
 		} else {
-			request(api+'/stars'+buildQuery(options), cb);
+			request(api+'/stars'+buildQuery(options), function(err, res, body){
+				cb(err, JSON.parse(body));
+			});
 		}
 	},
 	getConstellations: function(cb){
 		console.log('Getting constellations...');
-		request(api+'/constellations', cb);
+		request(api+'/constellations', function(err, res, body){
+			cb(err, JSON.parse(body));
+		});
 	},
 	getConstellation: function(con, cb){
 		console.log('Getting constellation '+con+'...');
-		request(api+'/constellations?con='+con, cb);
+		request(api+'/constellations?con='+con, function(err, res, body){
+			cb(err, JSON.parse(body));
+		});
 	},
 	addToConstellation: function(stars, cb){
 		console.log('Adding stars to their constellations...');
@@ -54,7 +62,9 @@ function makePutRequest(url, body, cb){
 		headers: {
 	        'Content-Type': 'application/json'
     	},
-		body: JSON.stringify(body)}, cb);
+		body: JSON.stringify(body)}, function(err, res, body){
+			cb(err, JSON.parse(body));
+		});
 }
 
 function buildQuery(options){
