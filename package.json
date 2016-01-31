@@ -1,6 +1,6 @@
 {
   "name": "skyglass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An API that interacts with the Telescope service.",
   "main": "skyglass.js",
   "scripts": {
