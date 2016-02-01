@@ -26,7 +26,9 @@ module.exports = {
 	getConstellation: function(con, cb){
 		console.log('Getting constellation '+con+'...');
 		request(api+'/constellations?con='+con, function(err, res, body){
-			cb(err, JSON.parse(body));
+			body = JSON.parse(body);
+			body.connections = parseConnections(body.connections);
+			cb(err, body);
 		});
 	},
 	addToConstellation: function(stars, cb){
@@ -65,6 +67,13 @@ function makePutRequest(url, body, cb){
 		body: JSON.stringify(body)}, function(err, res, body){
 			cb(err, JSON.parse(body));
 		});
+}
+
+function parseConnections(connections){
+	return connections.map(function(val){
+		val = val.split('-');
+		return [parseInt(val[0]), parseInt(val[1])];
+	})
 }
 
 function buildQuery(options){
