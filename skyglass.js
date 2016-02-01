@@ -20,7 +20,11 @@ module.exports = {
 	getConstellations: function(cb){
 		console.log('Getting constellations...');
 		request(api+'/constellations', function(err, res, body){
-			cb(err, JSON.parse(body));
+			body = JSON.parse(body);
+			for(con in body){
+				body[con].connections = parseConnections(body[con].connections);
+			}
+			cb(err, body);
 		});
 	},
 	getConstellation: function(con, cb){
